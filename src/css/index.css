@@ -14,7 +14,7 @@
   width: 100%;
   text-align: center;
   display: flex;
-  background-image: url("/src/img/sec1/main_back.jpg");
+  background-image: url("/jeantest/src/img/sec1/main_back.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@
 }
 
 #reasons {
-  background-image: url("/src/img/main/main_background_2.jpg");
+  background-image: url("/jeantest/src/img/main/main_background_2.jpg");
   text-align: center;
 }
 #reasons_div {
