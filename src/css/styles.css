@@ -423,7 +423,7 @@ section#main_footer {
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1200px) {
   #mobile_menu {
     display: block;
   }
