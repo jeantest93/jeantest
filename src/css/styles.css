@@ -1,3 +1,15 @@
+@charset "utf-8";
+.bold{font-weight: bold}
+.sm_t{font-size: 14px}
+p.all{white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px}
+body{font-family: 'Lato','Noto Sans KR','Dotum','돋움',sans-serif;}
+.container{max-width: 1218px; margin: 0 auto;  height: 100%}
+
+/* layout */
+#header{width: 100%;  position: relative; z-index: 999;}
+#wrap{width: 100%;  }
+#footer{ padding: 50px 30px 50px 30px;   background: #f8faff}
+
 /* header */
 .top_banner_box{width: 100%; height: 68px; text-align: center; background-color: #f0ece0; line-height: 68px;  font-size: 20px; font-weight: 300; }
 .top_banner_box .join_btn{position: relative;background: #000000;border-radius: 19px; font-size: 15px; color: #fff; margin-left: 15px; padding: 8px 19px 8px 23px; }
@@ -14,6 +26,25 @@
 .mobile_sns ul{display: flex; justify-content: space-around}
 .mobile_sns img{width: 40px; height: 40px}
 
+
+/* sns_list */
+.sns_list{position: fixed; right: 20px; bottom:60px; z-index: 99999999;}
+.sns_list li{margin-top: 5px}
+.sns_list img{width: 45px; height: 45px}
+.top_inner_box{position: relative; }
+.tnb{float: right; margin-right: 30px}
+.tnb ul li{float: left;}
+.tnb ul li:last-child{display: none}
+.tnb ul li a{ font-size: 15px; padding: 0 10px; line-height: 50px;}
+.cate_wrap .cate_logo{float: left; text-align: center; position: absolute;left: 50px; margin-right: 20px; top: 70px}
+.cate_wrap .cate_logo .logo_tit{font-family: 'Libre Baskerville','Noto Sans KR','Dotum','돋움',sans-serif;font-size: 30px; font-weight: normal}
+.cate_wrap .cate_logo .logo_txt{font-size: 13px; position: absolute;top: 40px; left: 13px}
+
+.cate_wrap .cate_right{width: 100%;}
+.cate_wrap .cate_right .category{margin: 0 auto; width: 1200px;}
+.cate_wrap .cate_right .category .gnb{float: right}
+.cate_wrap .cate_right .category .gnb>li{float: left; width: 180px; font-size: 16px;font-family: 'Libre Baskerville','Noto Sans KR','Dotum','돋움',sans-serif; }
+.cate_wrap .cate_right .category .gnb>li>a{line-height: 110px; text-align: center; display: block}
 
 /* two_depth */
 .box_open{position: absolute; background: #fff; width: 100%; display: none; left: 0; margin-top: 1px; }
@@ -34,6 +65,7 @@
 .box_open.open_02>ul .bt{font-size: 1.2em; padding-bottom: 10px}
 .box_open.open_03>ul{padding-right: 40px}
 .box_open.open_03>ul>li{float: right; }
+
 
 
 
