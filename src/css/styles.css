@@ -68,6 +68,9 @@ body{font-family: 'Lato','Noto Sans KR','Dotum','돋움',sans-serif;}
 
 
 
+/* wrap_box */
+#wrap_box{ position: absolute; top: 0; width: 100%}
+
 
 
 
