@@ -30,12 +30,13 @@ footer {
 
 
 nav ul {
-  list-style: none;
+ 
   padding: 0;
 }
 nav ul li {
   display: inline;
   margin-left: 40px;
+	list-style: none;
 }
 nav ul li a {
   color: #fff;
