@@ -67,9 +67,9 @@
                <div id="mobile_menu">
                   <div style="display: flex; justify-content: space-between; align-items: center">
                      <a href="https://thedeep.kr/index.html"
-                        ><img id="mobile_logo" src="./src/logo_black.png" style="width: 100px"
+                        ><img id="mobile_logo" src="./src/logo_white.png" style="width: 100px"
                      /></a>
-                     <img id="menu_icon" src="./src/menu_black.png" style="width: 28px" />
+                     <img id="menu_icon" src="./src/menu_white.png" style="width: 28px" />
                   </div>
                </div>
                <div id="overlay"></div>
@@ -367,16 +367,18 @@
                if (window.scrollY > 91) {
                   header.classList.add('hd_scroll');
                   $('#pc_logo > img').attr('src', './src/logo_black.png');
+                  $('#mobile_logo').attr('src', './src/logo_black.png');
+                  $('#menu_icon').attr('src', './src/menu_black.png');
                } else {
                   header.classList.remove('hd_scroll');
                   $('#pc_logo > img').attr('src', './src/logo_white.png');
+                  $('#mobile_logo').attr('src', './src/logo_white.png');
+                  $('#menu_icon').attr('src', './src/menu_white.png');
                }
             });
             $(header).hover(
                function () {
                   $('#pc_logo > img').attr('src', './src/logo_black.png');
-                  $('#mobile_logo').attr('src', './src/logo_black.png');
-                  $('#menu_icon').attr('src', './src/menu_black.png');
                },
                function () {
                   if (header.classList.contains('hd_scroll')) {
@@ -384,8 +386,6 @@
                   } else {
                      $('#pc_logo > img').attr('src', './src/logo_white.png');
                   }
-                  $('#mobile_logo').attr('src', './src/logo_white.png');
-                  $('#menu_icon').attr('src', './src/menu_white.png');
                }
             );
          </script>
@@ -416,8 +416,8 @@
 
       <section id="main_section">
          <div class="video-wrap">
-            <video poster="./src/img/main/main_video_img.png" loop="" autoplay="" muted="" playsinline="">
-               <source src="./src/img/main/main_video.mp4" type="video/mp4" />
+            <video poster="/src/img/main/main_video_img.png" loop="" autoplay="" muted="" playsinline="">
+               <source src="/src/img/main/main_video.mp4" type="video/mp4" />
             </video>
          </div>
 
