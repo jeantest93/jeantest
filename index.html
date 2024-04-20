@@ -73,129 +73,6 @@
                   </div>
                </div>
                <div id="overlay"></div>
-               <div id="new_window">
-                  <div id="mo_title_box" style="display: flex; justify-content: space-between">
-                     <div style="padding: 20px; margin-top: 20px">
-                        <a href="https://thedeep.kr/index.html"><img src="./src/logo_mo.png" style="width: 120px" /></a>
-                     </div>
-                     <a
-                        href=""
-                        style="
-                           margin-top: auto;
-                           margin-bottom: 24px;
-                           margin-right: auto;
-                           display: inline-flex;
-                           align-items: center;
-                           padding: 4px 10px;
-                           border: 1px solid #fff;
-                           color: #fff;
-                           text-decoration: none;
-                           border-radius: 100px;
-                           height: 30px;
-                           flex: 0 1 auto;
-                           box-sizing: border-box;
-                        "
-                        >문의하기</a
-                     >
-                     <div style="padding: 20px; align-self: top; margin-bottom: auto">
-                        <img id="close_button" src="./src/close_button_w.png" style="width: 24px" />
-                     </div>
-                  </div>
-                  <div id="mobile_menu_wrap">
-                     <ul>
-                        <li>
-                           <a href="#">회사소개</a>
-                        </li>
-                        <li>
-                           <span>컨설팅</span>
-                           <div class="depth_2">
-                              <div class="depth_align_wrap">
-                                 <div class="depth_block">
-                                    <ul>
-                                       <li>
-                                          <a href="#">마케팅 컨설팅</a>
-                                       </li>
-                                       <li>
-                                          <a href="#">블로그 진단</a>
-                                       </li>
-                                       <li>
-                                          <a href="#">교육 강의</a>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
-                        </li>
-                        <li>
-                           <span>상위노출</span>
-                           <div class="depth_2">
-                              <div class="depth_align_wrap">
-                                 <div class="depth_block">
-                                    <ul>
-                                       <li>
-                                          <a href="#">스마트 플레이스</a>
-                                       </li>
-                                       <li>
-                                          <a href="#">웹사이트</a>
-                                       </li>
-                                       <li>
-                                          <a href="#">블로그 기자단</a>
-                                       </li>
-                                       <li>
-                                          <a href="#">지식인</a>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
-                        </li>
-                        <li>
-                           <span>배포</span>
-                           <div class="depth_2">
-                              <div class="depth_align_wrap">
-                                 <div class="depth_block">
-                                    <ul>
-                                       <li>
-                                          <a href="#">블로그 기자단</a>
-                                       </li>
-                                       <li>
-                                          <a href="#">언론 보도</a>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
-                        </li>
-                        <li>
-                           <span>육성</span>
-                           <div class="depth_2">
-                              <div class="depth_align_wrap">
-                                 <div class="depth_block">
-                                    <ul>
-                                       <li>
-                                          <a href="#">카톡 채널 친구수</a>
-                                       </li>
-                                       <li>
-                                          <a href="#">블로그 관리대행</a>
-                                       </li>
-                                       <li>
-                                          <a href="#">블로그 최적화</a>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
-                        </li>
-                        <li>
-                           <a href="#">온라인광고</a>
-                        </li>
-                        <li>
-                           <a href="https://thedeep.kr/src/pages/contact.html">문의하기</a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-
                <!-- 메뉴 목록 -->
                <nav id="pc_menu">
                   <ul>
@@ -319,6 +196,10 @@
             function openNewWindow() {
                document.getElementById('overlay').style.display = 'block';
                document.getElementById('new_window').classList.add('show');
+               const userAgent = window.navigator.userAgent.toLowerCase();
+               if (userAgent.includes('naver')) {
+                  document.getElementById('new_window').classList.add('height');
+               }
             }
 
             // Function to close the new window with animation
@@ -408,6 +289,7 @@
   });
 </script> -->
       </div>
+
       <div class="side_quick_menu_box">
          <a href="http://pf.kakao.com/_mxnAfG/chat">
             <img src="./src/kakao_logo.png" alt="카톡채널" />
@@ -474,7 +356,133 @@
                Copyright © 2023 Marketing Thedeep Co., Ltd. All rights reserved.
             </p>
          </footer>
-
+         <div id="new_window">
+            <div id="mo_title_box" style="display: flex; justify-content: space-between">
+               <div style="padding: 20px; margin-top: 20px">
+                  <a href="https://thedeep.kr/index.html"><img src="./src/logo_mo.png" style="width: 120px" /></a>
+               </div>
+               <a
+                  href=""
+                  style="
+                     margin-top: auto;
+                     margin-bottom: 24px;
+                     margin-right: auto;
+                     display: inline-flex;
+                     align-items: center;
+                     padding: 4px 10px;
+                     border: 1px solid #fff;
+                     color: #fff;
+                     text-decoration: none;
+                     border-radius: 100px;
+                     height: 30px;
+                     flex: 0 1 auto;
+                     box-sizing: border-box;
+                  "
+                  >문의하기</a
+               >
+               <div style="padding: 20px; align-self: top; margin-bottom: auto">
+                  <img
+                     id="close_button"
+                     onclick="closeNewWindow()"
+                     src="./src/close_button_w.png"
+                     style="width: 24px"
+                  />
+               </div>
+            </div>
+            <div id="mobile_menu_wrap">
+               <ul>
+                  <li>
+                     <a href="#">회사소개</a>
+                  </li>
+                  <li>
+                     <span>컨설팅</span>
+                     <div class="depth_2">
+                        <div class="depth_align_wrap">
+                           <div class="depth_block">
+                              <ul>
+                                 <li>
+                                    <a href="#">마케팅 컨설팅</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">블로그 진단</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">교육 강의</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <span>상위노출</span>
+                     <div class="depth_2">
+                        <div class="depth_align_wrap">
+                           <div class="depth_block">
+                              <ul>
+                                 <li>
+                                    <a href="#">스마트 플레이스</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">웹사이트</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">블로그 기자단</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">지식인</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <span>배포</span>
+                     <div class="depth_2">
+                        <div class="depth_align_wrap">
+                           <div class="depth_block">
+                              <ul>
+                                 <li>
+                                    <a href="#">블로그 기자단</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">언론 보도</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <span>육성</span>
+                     <div class="depth_2">
+                        <div class="depth_align_wrap">
+                           <div class="depth_block">
+                              <ul>
+                                 <li>
+                                    <a href="#">카톡 채널 친구수</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">블로그 관리대행</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">블로그 최적화</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <a href="#">온라인광고</a>
+                  </li>
+                  <li>
+                     <a href="https://thedeep.kr/src/pages/contact.html">문의하기</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
          <script>
             window.onload = function () {
                var pcFooter = document.getElementById('pc_footer');

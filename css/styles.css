@@ -95,6 +95,7 @@ nav > ul li a {
    /* Initial styles for the new window */
    position: fixed;
    top: 50%;
+   z-index: 9999;
    left: 100%;
    /* Initial position off-screen to the right */
    transform: translate(-50%, -50%);
@@ -118,6 +119,10 @@ nav > ul li a {
    visibility: visible;
    transition: opacity 0.5s, visibility 0s, left 0.5s;
    /* Transition for opacity and visibility */
+}
+
+#new_window.height {
+   height: 100% !important;
 }
 
 /* Main Menu */
